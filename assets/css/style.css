@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #ffffff;
+  background-color: #000;
   font-family: Montserrat, sans-serif;
   line-height: 27px;
     
@@ -39,4 +39,75 @@ ul {
   max-width: 100%;
   height: auto;
 }
+
+/* Page */
+.page {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  margin-bottom: 5px;
+  background-color: transparent;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 24px;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.nav-link {
+  padding: 10px;
+  margin: 0 15px;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 18px;
+}
+.nav-link:last-child {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.link-active,
+.nav-link:hover {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 8px;
+}
+
+/* Intro */
+
 
