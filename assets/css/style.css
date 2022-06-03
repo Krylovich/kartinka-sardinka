@@ -83,6 +83,7 @@ a {
   font-weight: 700;
   color: #ffffff;
   line-height: 24px;
+  margin-left: 10px;
 }
 
 /* Nav */
@@ -104,14 +105,7 @@ a {
 
 .nav-link:last-child {
     margin-right: 0;
-    
 }
-
-/*.link-active,
-.nav-link:hover {
-  border-bottom: 2px solid #ffffff;
-  padding-bottom: 8px;
-}*/
 
 .nav-link:after {
   position: absolute;
@@ -130,11 +124,6 @@ a {
 .nav-link:hover:after {
   width: 100%;
 }
-
-.link-active:after {
-    width: 100%;
-}
-
 
 /* Intro */
 .intro {
@@ -170,6 +159,7 @@ a {
   width: 520px;
   z-index: 1000;
   color: #ffffff;
+  margin-left: 10px;
 }
 
 .intro-info-descr {
@@ -205,6 +195,7 @@ a {
   padding: 27px 24px;
   color: #272727;
   background-color: #ffffff;
+  transition: all .3s;
 }
 
 .other {
@@ -215,7 +206,115 @@ a {
 }
 
 .btn:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.other:hover {
+  background-color: #ffffff;
+  color: #272727;
+}
+
+/* Section */
+.section {
+  padding: 30px 0;
+}
+
+/* Pack */
+.pack {
+  display: flex;
+  flex-direction: column;
+  margin-top: -105px;
+}
+
+/* Benefits */
+.benefits {
 
 }
+
+.benefits-title {
+  position: relative;
+  font-weight: 800;
+  font-size: 40px;
+  color: #ffffff;
+  text-align: right;
+  padding: 30px 10px 20px;
+}
+
+.benefits-title:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 875px;
+  content: ' ';
+  color: transparent;
+  background: #ffffff;
+  height: 2px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  margin-top: 65px;
+  margin-bottom: 85px;
+}
+
+.benefits-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+hr {
+  width: 25px;
+  height: 2px;
+  background-color: #f6c002;
+  border: none;
+  margin: 14px 15px;
+}
+
+.benefits-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  color: #ffffff;
+  width: 100%;
+  max-width: 307px;
+}
+
+.benefits-info-title {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 20px;
+}
+
+.benefits-info-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 35px;
+  width: 218px;
+}
+
+/* Img Design */
+.pack-img {
+  position: relative;
+  width: 100vw;
+  height: 670px;
+  object-fit: cover;
+  left: -50px;
+  top: 0;
+  z-index: 999; 
+}
+
 
 
