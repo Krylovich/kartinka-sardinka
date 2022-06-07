@@ -57,6 +57,7 @@ a {
 /* Container */
 .container {
   width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 50px;
 }
@@ -311,6 +312,7 @@ hr {
 /* Img Design */
 .container-img {
   position: relative;
+  height: 670px;
   width: 100%;
 }
 
@@ -326,16 +328,252 @@ hr {
 
 /* Pack Info */
 .pack-info {
-  display: flex;
-  flex-direction: row;
   background-color: #ffffff;
   width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .pack-info-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
 }
+
+.pack-info-title {
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: left;
+  color: #272727;
+  padding: 30px 10px 20px;
+}
+
+.pack-info-title:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 562px;
+  content: ' ';
+  color: transparent;
+  background: #272727;
+  height: 2px;
+}
+
+.info-text {
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 30px;
+  padding: 25px 10px;
+  width: 100%;
+  max-width: 577px;
+}
+
+.info-img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  margin: 50px 30px;
+}
+
+/* Process */
+.process-title {
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: right;
+  color: #ffffff;
+  padding: 55px 10px 20px;
+}
+
+.process-title:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1050px;
+  content: ' ';
+  color: transparent;
+  background: #ffffff;
+  height: 2px;
+}
+
+.process-list {
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
+  justify-content: space-between;
+  margin: 65px auto;
+ 
+}
+
+.process-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Circle */
+@property --p{
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+.circle,
+.mask,
+.circle-last {
+  position: relative;
+  background: transparent;
+  /*border: 5px solid rgba(255, 255, 255, 0.3);*/
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  height: 160px;
+  width: 160px;
+  z-index: 8;
+}
+
+.mask {
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  z-index: 9;
+}
+
+.circle {
+  --b: 5px;
+  --w: 160px;
+  aspect-ratio: 1;
+}
+  
+.circle:before,
+.circle:after {
+  content:"";
+  position: absolute;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.circle:before {
+  inset: 0;
+  background:
+    radial-gradient(farthest-side, #DF0B5C 98%,#0000) top/var(--b) var(--b) no-repeat,
+    conic-gradient(#DF0B5C calc(var(--p)*1%),#0000 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+          mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+}
+
+.circle:after {
+  inset: calc(50% - 7px/2);
+  background: #F6C002;
+  filter: blur(1px);
+  transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+
+.animate {
+  animation: p 1s 10s both;
+}
+
+@keyframes p {
+  from{--p:0}
+}
+
+.circle-title {
+  position: absolute; 
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: #FFFFFF;
+  top: 42%;
+  left: 55px;
+}
+
+.circle-last {
+  background: #DF0B5C;
+  border: none;
+}
+
+/* Process item */
+.process-item-title {
+  margin-top: 26px;
+  margin-bottom: 26px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+
+.process-list-item p {
+  width: 140px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+/* Process footer */
+.proc-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.proc-priсe {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.price-btn {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+/* Sercices */
+.serv {
+  margin-top: -15px;
+}
+
+.services {
+  background-color: #ffffff;
+  padding-top: 30px;
+}
+
+.services-title {
+  position: relative;
+  font-weight: 800;
+  font-size: 40px;
+  color: #272727;
+  text-align: left;
+  padding: 30px 10px 20px;
+}
+
+.services-title:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 610px;
+  content: ' ';
+  color: transparent;
+  background: #272727;
+  height: 2px;
+}
+
+
+
+
+
+
+
+
 
 
 
