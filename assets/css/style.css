@@ -232,10 +232,6 @@ a {
 }
 
 /* Benefits */
-.benefits {
-
-}
-
 .benefits-title {
   position: relative;
   font-weight: 800;
@@ -747,6 +743,128 @@ hr {
   left: 50px;
 }
 
+.serv-info {
+  text-align: right;
+  padding: 10px;
+  padding-bottom: 60px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #272727;
+}
+
+/* Portfolio */
+.portfolio {
+  background-color: #fafafa;
+  padding-top: 30px;
+  margin-top: -60px;
+}
+
+.portfolio-title {
+  position: relative;
+  font-weight: 800;
+  font-size: 40px;
+  color: #272727;
+  text-align: right;
+  padding: 30px 10px 20px;
+}
+  
+.portfolio-title:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 370px;
+  content: ' ';
+  color: transparent;
+  background: #272727;
+  height: 2px;
+}
+
+.portfolio-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  height: 1400px;
+  margin: 180px auto 50px;
+  padding-bottom: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.slider {
+  height: inherit;
+	overflow: hidden;
+	position: relative;
+	width: inherit;
+}
+
+.portfolio-wrapper > input {
+	display: none;
+}
+
+.slides {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 370px);
+  justify-content: space-between;
+  grid-column-gap: 75px;
+  grid-row-gap: 75px;
+  position: absolute;
+  opacity: 0;
+	z-index: 0;
+	transition: opacity linear .3s;
+}
+
+.slider-img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 1px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 1300px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.portfolio-wrapper .controls {
+  margin-top: -140px;
+	position: absolute;
+}
+
+.portfolio-wrapper label {
+	cursor: pointer;
+	display: inline-block;
+  padding: 20px 30px;
+	margin: 30px 60px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 10px;
+	position: relative;
+  border: 2px solid #fafafa;
+	transition: border linear .2s;
+}
+
+.portfolio-wrapper label:hover, 
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4){
+	border: 2px solid #272727;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3,
+#slide4:checked ~ .slider > .slide4 {
+	opacity: 1;
+	z-index: 1;
+	transform: opacity linear .3s;
+}
 
 
 
