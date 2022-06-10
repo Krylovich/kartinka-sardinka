@@ -469,7 +469,7 @@ hr {
 }
 
 .animate {
-  animation: p 1s 10s both;
+  animation: p 1s 5s both;
 }
 
 @keyframes p {
@@ -873,4 +873,4 @@ hr {
 
 
 
-
+/* Madia q
