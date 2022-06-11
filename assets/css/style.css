@@ -1104,7 +1104,66 @@ hr {
 .blog-slider {
   display: flex;
   flex-direction: row;
-  
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.blog-arrow-left,
+.blog-arrow-right {
+  width: 40px;
+  height: 43px;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity linear .1s;
+}
+
+.blog-arrow-right:hover {
+  transform: translateX(10px);
+}
+
+.blog-arrow-left:hover {
+  transform: translateX(-10px);
+}
+
+.no-active {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.no-active:hover {
+  transform: none;
+}
+
+.blog-slide-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 450px;
+  height: 650px;
+  background-color: #ffffff;
+  margin: 30px 25px;
+  border-radius: 1px;
+}
+
+.blog-img {
+  width: 100%;
+}
+
+.blogs-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #272727;
+  margin: 25px;
+}
+
+.blog-text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 27px;
+  padding: 10px 25px;
 }
 
 
