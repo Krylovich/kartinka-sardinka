@@ -228,7 +228,8 @@ a {
 .pack {
   display: flex;
   flex-direction: column;
-  margin-top: -105px;
+  position: relative;
+  top: -105px;
 }
 
 /* Benefits */
@@ -535,7 +536,8 @@ hr {
 
 /* Sercices */
 .serv {
-  margin-top: -15px;
+  position: relative;
+  top: -105px;
 }
 
 .services {
@@ -754,10 +756,14 @@ hr {
 }
 
 /* Portfolio */
+.port {
+  position: relative;
+  top: -135px;
+  background-color: #fafafa;
+}
+
 .portfolio {
   background-color: #fafafa;
-  padding-top: 30px;
-  margin-top: -60px;
 }
 
 .portfolio-title {
@@ -783,7 +789,7 @@ hr {
 .portfolio-wrapper {
   width: 100%;
   max-width: 1400px;
-  height: 1400px;
+  height: 1300px;
   margin: 180px auto 50px;
   padding-bottom: 100px;
   padding-left: 10px;
@@ -866,11 +872,240 @@ hr {
 	transform: opacity linear .3s;
 }
 
+/* Reviews */
+.rev {
+  position: relative;
+  top: -165px;
+}
+
+.reviews {
+  background-color: #ffffff;
+  padding-top: 30px;
+}
+
+.reviews-title {
+  position: relative;
+  font-weight: 800;
+  font-size: 40px;
+  color: #272727;
+  text-align: left;
+  padding: 30px 10px 20px;
+}
+
+.reviews-title:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 750px;
+  content: ' ';
+  color: transparent;
+  background: #272727;
+  height: 2px;
+}
+
+.customers {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+}
+
+.customers-revs {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 40px;
+  width: 100%;
+}
+
+.revs-slider {
+  position: relative;
+  margin-top: 20px;
+}
+
+.revs-slide-item {
+  position: absolute;
+}
+
+.revs-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+
+.revs-avatar {
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.revs-header-title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  color: #272727;
+  margin: 15px;
+  width: 160px;
+}
+
+.revs-mine {
+  width: 480px;
+  margin: 15px 10px;
+}
+
+.revs-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 5px;
+}
+
+.revs-controls {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.revs-arrow-left,
+.revs-arrow-right {
+  cursor: pointer;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  transition: opacity linear .2s;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.revs-arrow-left:hover,
+.revs-arrow-right:hover {
+  opacity: 1;
+}
+
+.revs-arrow-left img,
+.revs-arrow-right img {
+  width: 100%;
+  height: auto;
+}
+
+.sim-slider-dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dot {
+  background-color: #c4c4c4;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  margin: 0 8px;
+}
+
+.dot-active {
+  background: #DF0B5C;
+  box-shadow: 0px 0px 10px 5px rgba(223, 11, 92, 0.15);
+}
+
+.customers-logos {
+  position: relative;
+  margin-top: 35px;
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: 190px 190px 190px;
+  grid-column-gap: 25px;
+  align-items: center;
+}
+
+.logos-img {
+  margin: 5px 20px;
+  width: 100%;
+  max-width: 150px;
+  padding: 10px;
+  height: auto;
+}
+
+.bon-sai {
+  grid-column-start: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.bon-sai img {
+  margin-top: 30px;
+  padding: 5px 0;
+}
+
+.bol {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+}
+
+.bol img {
+  max-width: 365px;
+}
+
+/* Blog */
+.blogs {
+  position: relative;
+  top: -185px;
+}
+
+.blog-title {
+  position: relative;
+  font-weight: 800;
+  font-size: 40px;
+  color: #ffffff;
+  text-align: right;
+  padding: 30px 10px 20px;
+}
+
+.blog-title:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 875px;
+  content: ' ';
+  color: transparent;
+  background: #ffffff;
+  height: 2px;
+}
+
+.blog-info {
+  text-align: right;
+  padding: 10px;
+  padding-bottom: 60px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.blog-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.blog-slider {
+  display: flex;
+  flex-direction: row;
+  
+}
 
 
 
-
-
-
-
-/* Madia q
