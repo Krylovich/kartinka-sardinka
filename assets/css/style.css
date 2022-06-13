@@ -1467,18 +1467,23 @@ hr {
 
   /* Portfolio */
   .portfolio-wrapper {
-    height: 1400px;
+    height: 1540px;
+    max-width: 1600px;
   }
 
   .slides {
     grid-template-columns: repeat(3, 420px);
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-column-gap: 70px;
+    grid-row-gap: 90px;
   }
 
   .slider-img {
     width: 400px;
     height: 400px;
+  }
+
+  .controls {
+    width: 1480px;
   }
 
   /* Reviews */
