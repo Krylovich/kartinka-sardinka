@@ -311,20 +311,29 @@ hr {
 
 /* Img Design */
 .container-img {
-  position: relative;
-  height: 670px;
+  height: 80vh;
   width: 100%;
 }
 
-.pack-img {
+.img-parallax {
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/img-design-parallax.png);
+}
+
+/*.pack-img {
   width: 100%;
   height: 670px;
   object-fit: cover;
+  background-attachment: fixed;
   left: 0;
   right: 0;
   top: 0;
   z-index: 999; 
-}
+} */
 
 /* Pack Info */
 .pack-info {
@@ -444,7 +453,7 @@ hr {
 
 .circle {
   --b: 5px;
-  --w: 160px;
+  --w: 162px;
   aspect-ratio: 1;
 }
   
@@ -1249,12 +1258,27 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
 }
 
-.footer-contacts a img {
+.contact-icon {
   width: 30px;
   height: 30px;
+  position: absolute;
+}
+
+.contact-icon-pink {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  left: -1px;
   margin-right: 25px;
+  background-color: #fff;
+  opacity: 0;
+}
+
+.footer-contact a:hover .contact-icon-pink {
+  opacity: 1;
 }
 
 .socials {
@@ -1291,18 +1315,203 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  position: relative;
 }
 
 .socials-icons a {
   margin-top: 30px;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .social-icon {
   width: 45px;
   height: 45px;
+  opacity: 1;
+  z-index: 9;
+  position: absolute;
 }
+
+.social-icon-pink {
+  width: 55px;
+  height: 55px;
+  opacity: 0;
+  z-index: 10;
+  top: -5px;
+  left: -5px;
+  position: relative;
+  background-color:#fff;
+  transform: scale(1);
+  transition: all linear .2s;
+}
+
+.social-icon-pink:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Media queries */
+@media (min-width: 1700px) {
+  /* Container */
+  .container {
+    max-width: 1600px;
+  }
+
+  /* Header */
+  .header-title {
+    font-size: 24px;
+  }
+
+  .nav {
+    font-size: 18px;
+  }
+
+  /* Intro */
+  .intro-info {
+    width: 600px;
+  }
+
+  .intro-info-descr {
+    font-size: 20px;
+  }
+
+  .intro-info-title {
+    font-size: 76px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 30px 27px;
+  }
+
+  .other {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  /* Pack */
+  .icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  hr {
+    width: 30px;
+  }
+
+  .benefits-info-text {
+    font-size: 18px;
+    width: 240px;
+  }
+
+  .info-text {
+    font-size: 20px;
+  }
+
+  .process-list {
+    grid-template-columns: repeat(6, 180px);
+  }
+
+  .circle, 
+  .mask, 
+  .circle-last  {
+    height: 180px;
+    width: 180px;
+  }
+
+  .circle {
+    --w: 182px;
+  }
+
+  .circle-title {
+    left: 66px;
+  }
+
+  .price-btn {
+    padding-left: 47px;
+    padding-right: 47px;
+  }
+
+  /* Services */
+  .slide {
+    height: 550px;
+    max-width: 120px;
+  }
+
+  .slider-icon {
+    left: 35px;
+  }
+
+  .icon-act {
+    left: 50px;
+  }
+
+  .slide.active {
+    max-width: 1000px;
+  }
+
+  .slide-priсe {
+    margin-bottom: 0px;
+  }
+
+  .slide-img {
+    width: 300px;
+    height: 300px;
+    top: 8px;
+    left: 58px;
+  }
+
+  .slide-contain {
+    margin: 122px 40px 40px 10px;
+  }
+
+  /* Portfolio */
+  .portfolio-wrapper {
+    height: 1400px;
+  }
+
+  .slides {
+    grid-template-columns: repeat(3, 420px);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+  }
+
+  .slider-img {
+    width: 400px;
+    height: 400px;
+  }
+
+  /* Reviews */
+  .logos {
+    grid-template-columns: 210px 210px 210px;
+  }
+
+  .logos-img {
+    max-width: 170px;
+  }
+
+  .bol img {
+    max-width: 405px;
+  }
+
+  /* Blog */
+  .blog-slide-item {
+    max-width: 500px;
+    height: 700px;
+  }
+  
+  /* Footer */
+  .footer-inner {
+    justify-content: space-between;
+  }
+
+}
+
+
+
+
+
+
 
 
 
