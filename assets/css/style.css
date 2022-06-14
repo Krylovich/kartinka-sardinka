@@ -1354,7 +1354,7 @@ hr {
 @media (min-width: 1700px) {
   /* Container */
   .container {
-    max-width: 1600px;
+    max-width: 1700px;
   }
 
   /* Header */
@@ -1509,9 +1509,122 @@ hr {
   .footer-inner {
     justify-content: space-between;
   }
-
 }
 
+@media (max-width: 1386px) {
+  /* Container */
+  .container{
+    max-width: 1250px;
+    padding: 0 20px;
+  }
+
+  /* Pack */
+  .info-img {
+    max-width: 400px;
+  }
+
+  .process-title:after {
+    width: 1030px;
+  }
+
+  .process-list {
+    margin: 55px auto;
+    grid-template-columns: repeat(6, 150px);
+  }
+
+  .circle {
+    --w: 152px;
+  }
+
+  .circle, 
+  .mask, 
+  .circle-last {
+    height: 150px;
+    width: 150px;
+  }
+
+  /* Services */
+  .slide {
+    max-width: 90px;
+    height: 490px;
+  }
+
+  .slider-icon {
+    bottom: 40px;
+    left: 20px;
+  }
+
+  .slide.active {
+    max-width: 850px;
+  }
+
+  .slide-item {
+    height: 490px;
+  }
+
+  .slide-title {
+    margin: 25px 40px;
+  }
+
+  .title-full {
+    margin: 40px;
+    margin-right: 5px;
+    padding-left: 30px;
+    padding-top: 30px;
+  }
+
+  .slide-priсe {
+    padding: 40px;
+  }
+
+  .icon-act {
+    left: 40px;
+  }
+
+  .slide-contain {
+    margin: 40px 40px 40px 5px;
+    padding: 30px;
+  }
+
+  .slide-img {
+    top: 100px;
+
+  }
+
+  /* Portfolio */
+  .portfolio-wrapper {
+    max-width: 1250px;
+    height: 1100px;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+  }
+
+  .controls {
+    width: 95%;
+    max-width: 1250px;
+  }
+
+  .portfolio-wrapper label {
+    margin: 30px;
+  }
+
+  .slides {
+    grid-template-columns: repeat(3, 30%);
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+  }
+
+  .slider-img {
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  
+}
 
 
 
