@@ -19,6 +19,7 @@ body.no-scroll{
 *:before,
 *:after {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1,
@@ -516,7 +517,6 @@ hr {
   position: absolute; 
   font-weight: 600;
   font-size: 22px;
-  line-height: 27px;
   color: #FFFFFF;
   top: 42%;
   left: 55px;
@@ -533,7 +533,6 @@ hr {
   margin-bottom: 26px;
   font-weight: 700;
   font-size: 22px;
-  line-height: 27px;
   color: #FFFFFF;
 }
 
