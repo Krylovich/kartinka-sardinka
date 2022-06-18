@@ -824,6 +824,9 @@ hr {
   padding-right: 10px;
 }
 
+.portfolio-controls {
+  display: none;
+}
 .slider {
   height: inherit;
 	overflow: hidden;
@@ -2685,6 +2688,9 @@ hr {
 }
 
 @media (max-width: 426px) {
+  .page {
+    overflow-x: hidden;
+  }
   /* Container */
   .container {
     padding: 0 10px;
@@ -2710,6 +2716,7 @@ hr {
     left: 20px;
     z-index: 1000;
   }
+
   /* Intro */
   .intro-tablet {
     display: none;
@@ -2857,6 +2864,264 @@ hr {
   }
 
   /* Services */
+  .slide {
+    height: 50px;
+  }
+
+  .slide-title {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 10px;
+  }
+
+  .slider-icon {
+    bottom: 5px;
+    left: calc(100% - 50px);
+  }
+
+  .title-full {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 0;
+    padding-top: 10px;
+    width: 260px;
+  }
+
+  .slide-list {
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .slide-priсe {
+    padding: 35px 10px 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .icon-act {
+    bottom: 10px;
+  }
+
+  .serv-info,
+  .blog-info {
+    padding: 10px 10px 30px;
+    font-size: 14px;
+    line-height: 22px;
+    width: 298px;
+    margin-left: calc(100% - 298px);
+  }
+
+  /* Portfolio */
+  .portfolio-wrapper {
+    height: 400px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .portfolio-wrapper label {
+    font-size: 14px;
+    padding: 16px 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .slides {
+    grid-template-columns: repeat(9, 100%);
+    transform: translateX(0pt);
+    column-gap: 10px;
+  }
+
+  .controls {
+    width: 100%;
+  }
+
+  .portfolio-title {
+    padding-right: 20px;
+  }
+
+  .portfolio-img {
+    width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .portfolio-controls {
+    margin-top: -30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .portfolio-arrow-left,
+  .portfolio-arrow-right {
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    transition: opacity linear .2s;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  /* Reviews */
+  .revs-avatar {
+    width: 85px;
+    height: 85px;
+    padding: 5px;
+    margin-left: 0;
+  }
+
+  .revs-header-title {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .revs-mine {
+    width: 280px;
+    margin: 0;
+  }
+
+  .customers-revs {
+    margin: 10px auto;
+  }
+
+  .revs-text {
+    font-size: 13px;
+    line-height: 22px;
+    text-align: justify;
+  }
+
+  .logos {
+    grid-template-columns: 30% 30% 30%;
+  }
+
+  .customers-logos {
+    margin-bottom: 25px;
+    margin-top: 30px;
+  }
+
+  /* Blog */
+  .blog-info {
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+
+  .blog-wrapper {
+    margin-top: 10px;
+  }
+
+  .blog-slide-item {
+    margin-left: auto;
+    margin-right: auto;
+  } 
+
+  .blog-arrow-left, 
+  .blog-arrow-right {
+    position: absolute;
+    top: 103%;  
+    width: 30px;
+  }
+
+  .blog-arrow-left {
+    left: 20%;
+  }
+
+  .blog-arrow-right {
+    right: 20%;
+  }
+
+  .blog-arrow-left img, 
+  .blog-arrow-right img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .blog-slide-item {
+    height: auto;
+  }
+
+  .blogs-title {
+    font-size: 14px;
+    line-height: 27px;
+  }
+
+  .blog-text {
+    font-size: 12px;
+    line-height: 22px;
+    padding: 10px;
+    padding-bottom: 50px;
+    text-align: justify;
+  }
+
+  /* Footer */
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  .footer-title {
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .footer-descr {
+    font-size: 14px;
+    padding-bottom: 17px;
+    padding-top: 15px;
+    padding-left: 55px;
+    text-align: center;
+    padding-right: 55px;
+  }
+
+  .footer-descr:after {
+    width: 93%;
+    left: -10px;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
+
+  .footer-contact {
+    margin: auto;
+  }
+
+  .footer-contact a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .social-title {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 17px 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .social-title:after {
+    width: 100%;
+    left: -2px;
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icon-pink {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 
