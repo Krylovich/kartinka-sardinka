@@ -2638,16 +2638,25 @@ hr {
 
 @media (max-height: 570px) {
   .intro-info {
-    top: 20%;
+    top: 19%;
   }
 
   .intro-info-title {
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 35px;
+    line-height: 35px;
   }
 
   .intro-btns {
     margin-top: 5px;
+  }
+
+  .btn {
+    padding: 14px;
+  }
+
+  .intro-info-descr {
+    font-size: 12px;
+    line-height: 10px;
   }
 }
 
