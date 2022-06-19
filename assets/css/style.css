@@ -2312,7 +2312,7 @@ hr {
 
   .line {
     position: absolute;
-    width: 30px;
+    width: 20px;
   }
 
   .line-main:before,
@@ -2337,7 +2337,7 @@ hr {
 
   .line-split:before,
   .line-split::after {
-    width: 20px;
+    width: 10px;
     transition: transform opacity .5s;
   }
 
@@ -2637,8 +2637,8 @@ hr {
 }
 
 @media (max-height: 570px) {
-  .intro-tablet {
-    height: 580px;
+  .intro-info {
+    top: 20%;
   }
 }
 
