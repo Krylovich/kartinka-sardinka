@@ -506,7 +506,8 @@ hr {
 }
 
 .animate {
-  animation: p 1s 5s both;
+  animation: p 5s 5s both;
+  Animation-iteration-count: infinite;
 }
 
 @keyframes p {
@@ -2632,6 +2633,12 @@ hr {
 
   .socials {
     margin-top: 20px;
+  }
+}
+
+@media (max-height: 570px) {
+  .intro-tablet {
+    height: 580px;
   }
 }
 
