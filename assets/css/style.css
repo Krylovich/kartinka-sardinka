@@ -2811,7 +2811,7 @@ hr {
 
   .img-parallax {
     height: 230px;
-    background-image: url(../img/img-design-parallax.png);
+    
   }
 
   .pack-info-text {
@@ -2827,7 +2827,7 @@ hr {
   .info-text {
     font-size: 14px;
     line-height: 20px;
-    padding: 10px;
+    padding: 10px 0;
     text-align: justify;
     margin: 30px auto 10px;
   }
@@ -2863,6 +2863,10 @@ hr {
   }
 
   /* Services */
+  .wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .slide {
     height: 50px;
   }
