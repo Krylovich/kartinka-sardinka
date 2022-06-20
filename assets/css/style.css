@@ -2953,6 +2953,10 @@ hr {
     margin-left: calc(100% - 298px);
   }
 
+  .dino {
+    padding-left: 0px;
+  }
+
   /* Portfolio */
   .portfolio-wrapper {
     height: 400px;
