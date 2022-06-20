@@ -506,7 +506,7 @@ hr {
 }
 
 .animate {
-  animation: p 5s 5s both;
+  animation: p 5s 1s both;
   Animation-iteration-count: infinite;
 }
 
@@ -615,7 +615,7 @@ hr {
   color: #ffffff;
   width: 8%;
   background-color: #272727;
-  transition: all ease-in-out .5s;
+  transition: all ease-in-out .25s;
 }
 
 .slide.active {
@@ -638,7 +638,7 @@ hr {
 
 .slide-full {
   opacity: 0;
-  transform: scale(0);
+  transform: scale(0) translate(-1%, -1%);
   
 }
 
@@ -647,8 +647,8 @@ hr {
   flex-direction: row;
   justify-content: space-between;
   opacity: 1;
-  transform: scale(1);
-  transition: all linear .7s;
+  transform: scale(1) translate(0, 0);
+  transition: transform linear .25s;
 }
 
 .slide-item {
@@ -774,20 +774,11 @@ hr {
   left: 25px;
   width: 50px;
   height: 50px;
-  transition: left linear .5s;
+  transition: left linear .3s;
 }
 
 .slide.active > .icon-act {
   left: 50px;
-}
-
-.serv-info {
-  text-align: right;
-  padding: 10px;
-  padding-bottom: 50px;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 30px;
 }
 
 /* Portfolio */
@@ -1461,7 +1452,7 @@ hr {
   }
 
   .slider-icon {
-    left: 35px;
+    left: 30%;
   }
 
   .slide.active > .icon-act {
@@ -1578,7 +1569,7 @@ hr {
 
   .slider-icon {
     bottom: 40px;
-    left: 20px;
+    left: 25%;
   }
 
   .slide.active {
@@ -2013,7 +2004,7 @@ hr {
     width: 45px;
     height: 45px;
     bottom: 30px;
-    left: 12px;
+    left: 23%;
   }
 
   .slide.active {
@@ -2069,12 +2060,6 @@ hr {
     left: 47px;
     width: 200px;
     height: 200px;
-  }
-
-  .serv-info {
-    padding: 8px 8px 30px;
-    font-size: 16px;
-    line-height: 24px;
   }
 
   /* Portfolio */
@@ -2507,6 +2492,7 @@ hr {
   /* Services */
   .wrapper {
     flex-direction: column;
+    align-items: center
   }
 
   .slide {
@@ -2515,8 +2501,12 @@ hr {
     transition: initial;
   }
 
+  .slide-full {
+    transform: scale(1) translate(-1%, 100%);
+  }
+
   .slide.active > .act {
-    transition: all linear .5s;
+    transition: all linear .1s;
   }
 
   .slide-title {
@@ -2540,10 +2530,6 @@ hr {
     height: 100%;
     max-width: 750px;
   } 
-
-  .serv-info {
-    padding-right: 0px;
-  }
 
   .title-full:before, 
   .slide-contain:before,
@@ -2576,6 +2562,10 @@ hr {
   .slide-priсe {
     padding: 40px 20px 10px;
     margin-bottom: 10px;
+  }
+
+  .dino {
+    padding-left: 10px;
   }
 
   /* Portfolio */
