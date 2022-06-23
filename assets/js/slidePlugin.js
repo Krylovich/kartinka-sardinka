@@ -5,15 +5,15 @@ function slidesPlugin(activeSlide = 1) {
   
   for (const slide of slides) {
      slide.addEventListener('click', () => {
-        clearClasses();
+       clearClasses();
 
-         slide.classList.add('active'); 
+       slide.classList.add('active'); 
      });
     };
     
     function clearClasses() {
         slides.forEach( (slide) => {
-            slide.classList.remove('active')
+          slide.classList.remove('active')
         });  
     }
 }

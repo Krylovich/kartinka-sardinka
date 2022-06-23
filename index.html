@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Картинка-Сардинка</title>
   </head>
-  <body>
+  <body ontouchstart="">
    <div class="page">
      <!-- HEADER -->
      <header class="header">
@@ -376,38 +376,72 @@
             <div class="customers">
               <div class="customers-revs">
                 <div class="revs-slider">
-                  <div class="revs-slide-item ">
-                  <div class="revs-header">
-                    <img src="assets/img/rev/01.png" class="revs-avatar" alt="avatar">
-                    <h6 class="revs-header-title">Тая Лисова</h6>
-                  </div>
-                  <div class="revs-mine">
-                    <p class="revs-text"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                      sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-                      magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-                      et justo duo dolores et ea rebum. 
+                  <div class="revs-slider-list">
+                    <div class="revs-slide-item" id="rev-left">
+                      <div class="revs-header">
+                        <img src="assets/img/rev/01.png" class="revs-avatar" alt="avatar">
+                        <h6 class="revs-header-title">Тая Лисова</h6>
+                      </div>
+                      <div class="revs-mine">
+                        <p class="revs-text"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                          sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                          magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+                          et justo duo dolores et ea rebum. 
 
-                      Stet clita kasd gubergren, no sea takimata sanctus est 
-                      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
-                      consetetur sadipscing elitr, sed diam</p> 
-                  </div>
-                  </div> <!-- /.rev-slide-item -->
+                          Stet clita kasd gubergren, no sea takimata sanctus est 
+                          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+                          consetetur sadipscing elitr, sed diam</p> 
+                      </div>
+                    </div> <!-- /.revs-slide-item -->
+
+                    <div class="revs-slide-item" id="rev-active">
+                      <div class="revs-header">
+                        <img src="assets/img/kabacha.png" class="revs-avatar" alt="avatar">
+                        <h6 class="revs-header-title">Чайный гриб</h6>
+                      </div>
+                      <div class="revs-mine">
+                        <p class="revs-text"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                          sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                          magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+                          et justo duo dolores et ea rebum. 
+
+                          Stet clita kasd gubergren, no sea takimata sanctus est 
+                          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+                          consetetur sadipscing elitr, sed diam</p> 
+                      </div>
+                    </div> <!-- /.revs-slide-item -->
+
+                    <div class="revs-slide-item" id="rev-right">
+                      <div class="revs-header">
+                        <img src="assets/img/ill.jpg" class="revs-avatar" alt="avatar">
+                        <h6 class="revs-header-title">Динозавр</h6>
+                      </div>
+                      <div class="revs-mine">
+                        <p class="revs-text"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                          sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                          magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+                          et justo duo dolores et ea rebum. 
+
+                          Stet clita kasd gubergren, no sea takimata sanctus est 
+                          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+                          consetetur sadipscing elitr, sed diam</p> 
+                      </div>
+                    </div> <!-- /.revs-slide-item -->
+                  </div> <!-- /.revs-slider-list-->
                   <div class="revs-controls">
                     <a class="revs-arrow-left">
                       <img src="assets/icon/arr-prev.svg" alt="стрелка">
                     </a>
-                    <ul class="sim-slider-dots">
+                    <ul class="rev-slider-dots">
+                      <li class="dot"></li>
                       <li class="dot dot-active"></li>
-                      <li class="dot"></li>
-                      <li class="dot"></li>
-                      <li class="dot"></li>
                       <li class="dot"></li>
                     </ul>
                     <a class="revs-arrow-right">
                       <img src="assets/icon/arr-next.svg" alt="стрелка">
                     </a>
                   </div>
-                </div> <!-- /.rev-slider -->
+                </div> <!-- /.revs-slider -->
               </div> <!-- /.customers-revs-->
               <div class="customers-logos">
                 <ul class="logos">
@@ -532,5 +566,6 @@
    </div> <!-- /.page -->
    <script src="assets/js/slidePlugin.js"></script>
    <script src="assets/js/burger.js"></script>
+   <script src="assets/js/sliderRev.js"></script> 
   </body>
 </html>

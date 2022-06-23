@@ -503,6 +503,7 @@ hr {
   background: #F6C002;
   filter: blur(1px);
   transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+  -webkit-transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
 }
 
 .animate {
@@ -511,7 +512,11 @@ hr {
 }
 
 @keyframes p {
-  from{--p:0}
+  from{--p:0};
+}
+
+@-webkit-keyframes p {
+  from{--p:0};
 }
 
 .circle-title {
@@ -931,18 +936,24 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  margin: 40px;
-  margin-right: 5px;
+  align-items: flex-start;
+  margin: 40px 5px 40px 0;
   width: 100%;
 }
 
 .revs-slider {
   position: relative;
   margin-top: 20px;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
 }
 
-.revs-slide-active {
-  position: absolute;
+.revs-slider-list {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  left: -500px;
 }
 
 .revs-header {
@@ -980,6 +991,26 @@ hr {
   padding: 15px 5px;
 }
 
+@keyframes move-left {
+  from {left: -500px;}
+  to {left: 0px;}
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 1s;
+}
+
+@keyframes move-right {
+  from {left: -500px;}
+  to {left: -1000px;}
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 1s;
+}
+
 .revs-controls {
   margin-top: 40px;
   margin-bottom: 30px;
@@ -1011,7 +1042,7 @@ hr {
   height: auto;
 }
 
-.sim-slider-dots {
+.rev-slider-dots {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2744,6 +2775,13 @@ hr {
     top: 17px;
     left: 20px;
     z-index: 1000;
+    opacity: 0;
+    transition: opacity ease-in-out .3s;
+  }
+
+  .show > .header-title-mobile {
+    opacity: 1;
+    transition: opacity ease-in-out .3s;
   }
 
   /* Intro */
