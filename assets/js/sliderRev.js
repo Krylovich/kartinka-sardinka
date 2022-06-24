@@ -1,43 +1,57 @@
-const BTN_LEFT = document.querySelector(".revs-arrow-left");
-const BTN_RIGHT = document.querySelector(".revs-arrow-right");
-const CAROUSEL = document.querySelector(".revs-slider-list");
-const SLIDES_LEFT = document.querySelector("#rev-left");
-const SLIDES_RIGHT = document.querySelector("#rev-right");
-const DOT = document.querySelectorAll('.dot');
+/* Устанавливаем индекс слайда по умолчанию */
+let slideIndex = 1;
+let dotIndex = 1;
+showSlides(slideIndex);
+activeDots(dotIndex);
 
-function moveLeft() {
-    CAROUSEL.classList.add("transition-left");
-    BTN_LEFT.removeEventListener("click", moveLeft);
-    BTN_RIGHT.removeEventListener("click", moveRight);
+/* Увеличиваем индекс на 1 — показываем следующий слайд*/
+function nextSlide() {
+    showSlides(slideIndex += 1);
+    activeDots(dotIndex += 1);
 }
 
-const moveRight = () => {
-    CAROUSEL.classList.add("transition-right");
-    BTN_LEFT.removeEventListener("click", moveLeft);
-    BTN_RIGHT.removeEventListener("click", moveRight);
-};
+/* Уменьшает индекс на 1 — показываем предыдущий слайд*/
+function previousSlide() {
+    showSlides(slideIndex -= 1);
+    activeDots(dotIndex -= 1);  
+}
 
-BTN_LEFT.addEventListener("click", moveLeft);
-BTN_RIGHT.addEventListener("click", moveRight);
+/* Устанавливаем текущий слайд */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+    activeDots(activeDots = n);
+}
 
-CAROUSEL.addEventListener("animationend", (animationEvent) => {
-    let changedSlides;
-    if (animationEvent.animationName === "move-left") {
-      CAROUSEL.classList.remove("transition-left");
-      changedSlides = SLIDES_LEFT;
-      document.querySelector("#rev-active").innerHTML = SLIDES_LEFT.innerHTML;
-    } else {
-      CAROUSEL.classList.remove("transition-right");
-      changedSlides = SLIDES_RIGHT;
-      document.querySelector("#rev-active").innerHTML = SLIDES_RIGHT.innerHTML;
-   }
-
-    changedSlides.innerHTML = "";    
+/* Функция перелистывания */
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("revs-slide-item");
     
-    BTN_LEFT.addEventListener("click", moveLeft);
-    BTN_RIGHT.addEventListener("click", moveRight);
-});
+  if (n > slides.length) {
+    slideIndex = 1
+  }else if (n < 1) {
+    slideIndex = slides.length
+  }
+  
+  /* Проходим по каждому слайду в цикле for */
+  for (let slide of slides) {
+    slide.style.display = "none";
+  }   
+  slides[slideIndex - 1].style.display = "block"; 
 
- 
-BTN_LEFT.addEventListener("click", moveLeft);
-BTN_RIGHT.addEventListener("click", moveRight);
+}
+
+function activeDots(n) {
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > dots.length) {
+    dotIndex = 1
+  }else if (n < 1) {
+    dotIndex = dots.length
+  }
+
+  for (let dot of dots) {
+    dot.classList.remove('dot-active');
+  }
+  dots[dotIndex - 1].classList.add('dot-active');
+}

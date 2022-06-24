@@ -821,9 +821,6 @@ hr {
   padding-right: 10px;
 }
 
-.portfolio-controls {
-  display: none;
-}
 .slider {
   height: inherit;
 	overflow: hidden;
@@ -939,21 +936,30 @@ hr {
   align-items: flex-start;
   margin: 40px 5px 40px 0;
   width: 100%;
+  max-width: 500px;
+  overflow: hidden;
 }
 
 .revs-slider {
   position: relative;
   margin-top: 20px;
-  width: 500px;
-  height: 500px;
-  overflow: hidden;
+  width: 100%;
+  height: auto;
 }
 
 .revs-slider-list {
   position: relative;
   display: flex;
-  flex-direction: row;
-  left: -500px;
+}
+
+.revs-slider-list .revs-slide-item{
+  animation-name: fade;
+  animation-duration: .5s;
+}
+
+@keyframes fade {
+  from { opacity: 0;}
+  to { opacity: 1;}
 }
 
 .revs-header {
@@ -989,6 +995,7 @@ hr {
   font-size: 18px;
   line-height: 27px;
   padding: 15px 5px;
+  padding-left: 0;
 }
 
 @keyframes move-left {
@@ -1012,8 +1019,7 @@ hr {
 }
 
 .revs-controls {
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin: 40px auto 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2637,8 +2643,14 @@ hr {
     flex-direction: column;
   }
 
+  .revs-slider-list {
+    justify-content: center;
+  }
+
   .customers-revs {
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .logos {
@@ -3027,26 +3039,6 @@ hr {
     width: 100vw;
     padding-left: 0;
     padding-right: 0;
-  }
-
-  .portfolio-controls {
-    margin-top: -30px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .portfolio-arrow-left,
-  .portfolio-arrow-right {
-    cursor: pointer;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    opacity: 0.5;
-    transition: opacity linear .2s;
-    margin-left: 5px;
-    margin-right: 5px;
   }
 
   /* Reviews */
