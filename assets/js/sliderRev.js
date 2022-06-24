@@ -24,7 +24,6 @@ function currentSlide(n) {
 
 /* Функция перелистывания */
 function showSlides(n) {
-  let i;
   let slides = document.getElementsByClassName("revs-slide-item");
     
   if (n > slides.length) {
