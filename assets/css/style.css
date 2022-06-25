@@ -349,17 +349,6 @@ hr {
   background-image: url(../img/img-design-parallax.png);
 }
 
-/*.pack-img {
-  width: 100%;
-  height: 670px;
-  object-fit: cover;
-  background-attachment: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 999; 
-} */
-
 /* Pack Info */
 .pack-info {
   background-color: #ffffff;
@@ -1142,19 +1131,37 @@ hr {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
+  overflow: hidden;
 }
 
-.blog-arrow-left,
-.blog-arrow-right {
-  width: 40px;
-  height: 43px;
+.slick-track {
+  display: flex;
+  flex-direction: row;
+}
+
+.slick-arrow {
+  width: 35px;
+  height: 45px;
   cursor: pointer;
   opacity: 1;
   transition: opacity linear .1s;
+  font-size: 0;
+  position: absolute;
+  top: 50%;
+  border: none;
 }
 
-.blog-arrow-right:hover,
-.blog-arrow-left:hover {
+.slick-prev {
+  background: url(../icon/arr-prev-blog.svg) 0 0 /100% no-repeat;
+  left: 0;
+}
+
+.slick-next {
+  background: url(../icon/arr-next-blog.svg) 0 0 /100% no-repeat;
+  right: 0;
+}
+
+.slick-arrow:hover {
   transform: scale(1.1);
 }
 
@@ -1167,16 +1174,41 @@ hr {
   transform: none;
 }
 
+/* Blog Slider */
+.blog-slides {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.blog-slides > .slick-track {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.slick-list {
+  overflow: hidden;
+  width: calc(100% - 86px);
+  position: relative;
+  left: 43px;
+  right: -43px;
+}
+
 .blog-slide-item {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
-  max-width: 450px;
   height: 650px;
   background-color: #ffffff;
-  margin: 25px 25px 10px;
+  margin: 25px 50px 10px;
   border-radius: 1px;
+}
+
+.blog-sliders > .slick-slide {
+  width: 450px;
 }
 
 .blog-img {
@@ -1534,7 +1566,6 @@ hr {
 
   /* Blog */
   .blog-slide-item {
-    max-width: 500px;
     height: 700px;
   }
   
@@ -2624,10 +2655,6 @@ hr {
     justify-content: space-evenly;
   }
 
-  .invisible {
-    display: none;
-  }
-
   /* Reviews */
   .customers {
     flex-direction: column;
@@ -3021,10 +3048,6 @@ hr {
     height: 100%;
   }
 
-  .invisible {
-    display: initial;
-  }
-
   .slick-slide {
     width: 100vw;
     height: auto;
@@ -3114,34 +3137,35 @@ hr {
     margin-top: 10px;
   }
 
-  .blog-slide-item {
-    margin-left: auto;
-    margin-right: auto;
-  } 
-
-  .blog-arrow-left, 
-  .blog-arrow-right {
+  .slick-arrow {
     position: absolute;
     top: 103%;  
     width: 30px;
+    height: 35px;
   }
 
-  .blog-arrow-left {
+  .slick-prev {
     left: 20%;
   }
 
-  .blog-arrow-right {
+  .slick-next {
     right: 20%;
-  }
-
-  .blog-arrow-left img, 
-  .blog-arrow-right img {
-    width: 30px;
-    height: 30px;
   }
 
   .blog-slide-item {
     height: auto;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding: 0;
+  }
+
+  .slick-list {
+    width: calc(100% - 20px);
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .blogs-title {
