@@ -1134,11 +1134,6 @@ hr {
   overflow: hidden;
 }
 
-.slick-track {
-  display: flex;
-  flex-direction: row;
-}
-
 .slick-arrow {
   width: 35px;
   height: 45px;
@@ -1182,7 +1177,7 @@ hr {
   justify-content: space-between;
 }
 
-.blog-slides > .slick-track {
+.blog-slides  .slick-track {
   display: flex;
   flex-direction: row;
   gap: 10px;
