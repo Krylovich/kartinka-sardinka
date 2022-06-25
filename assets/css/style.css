@@ -3002,7 +3002,8 @@ hr {
     height: 400px;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
+    margin-top: 180px;
   }
 
   .portfolio-wrapper label {
@@ -3012,17 +3013,22 @@ hr {
     margin-right: 15px;
   }
 
+  .portfolio-wrapper .controls {
+    margin-top: -155px;
+  }
+
+  .slider {
+    height: 100%;
+  }
+
+  .invisible {
+    display: initial;
+  }
+
   .slick-slide {
     width: 100vw;
+    height: auto;
     padding: 0 5px;
-  }
-
-  .slick-slide:first-child {
-    padding-left: 10px;
-  }
-
-  .slick-slide:last-child {
-    padding-right: 10px;
   }
 
   .controls {
@@ -3041,9 +3047,20 @@ hr {
 
   .help {
     display: block;
-    margin: -42px auto 20px;
-    width: 30px;
-    height: 30px;
+    margin: 5px auto 20px;
+    width: 35px;
+    height: 35px;
+    animation: move .5s linear infinite alternate;
+  }
+
+  @keyframes move {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 20%;
+      transform:translateX(-20%);
+    }
   }
 
   /* Reviews */
