@@ -50,6 +50,7 @@ let dark = document.querySelector('#dark');
 
            element.addEventListener("click", hideNav);
 
-        });  
+        }); 
+        
 
         

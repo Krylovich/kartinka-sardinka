@@ -821,6 +821,10 @@ hr {
   padding-right: 10px;
 }
 
+.help {
+  display: none;
+}
+
 .slider {
   height: inherit;
 	overflow: hidden;
@@ -2257,7 +2261,10 @@ hr {
 
   .header {
     position: fixed;
-    background: #2727275c;
+  }
+
+  .header-dark {
+    background-color: #27272775;
   }
 
   .header-inner {
@@ -2995,6 +3002,7 @@ hr {
     height: 400px;
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 20px;
   }
 
   .portfolio-wrapper label {
@@ -3004,10 +3012,17 @@ hr {
     margin-right: 15px;
   }
 
-  .slides {
-    grid-template-columns: repeat(9, 100%);
-    transform: translateX(0pt);
-    column-gap: 10px;
+  .slick-slide {
+    width: 100vw;
+    padding: 0 5px;
+  }
+
+  .slick-slide:first-child {
+    padding-left: 10px;
+  }
+
+  .slick-slide:last-child {
+    padding-right: 10px;
   }
 
   .controls {
@@ -3022,6 +3037,13 @@ hr {
     width: 100vw;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .help {
+    display: block;
+    margin: -42px auto 20px;
+    width: 30px;
+    height: 30px;
   }
 
   /* Reviews */
@@ -3062,6 +3084,10 @@ hr {
   }
 
   /* Blog */
+  .blogs {
+    margin-bottom: 50px;
+  }
+
   .blog-info {
     padding-bottom: 5px;
     margin-bottom: 5px;
