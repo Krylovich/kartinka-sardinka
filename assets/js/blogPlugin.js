@@ -4,7 +4,7 @@ $('.blog-slides').slick ({
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    speed: 900,
+    speed: 500,
     variableWidth: false,
     waitForAnimated: false,
     mobileFirst: true,
