@@ -43,7 +43,7 @@ $('.slide1').slick ({
         slidesToScroll: 1,
         speed: 900,
         variableWidth: true,
-        waitForAnimated: false,
+        waitForAnimated: true,
         mobileFirst: true,
         responsive: [
            {
